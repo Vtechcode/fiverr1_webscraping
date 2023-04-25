@@ -1,3 +1,8 @@
+#This is a script to extract email addresses from the Empresite business directory 
+#(https://empresite.eleconomista.es/) and export them to Excel. 
+#A ThreadPoolExecutor object is created to handle multiple threads.
+#The checking_if_site_has_email() function is mapped onto the list of company URLs, so that the email addresses for each company can be checked simultaneously.
+
 from bs4 import BeautifulSoup, SoupStrainer
 import requests
 from urllib.parse import quote_plus
